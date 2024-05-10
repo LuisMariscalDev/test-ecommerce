@@ -1,0 +1,6 @@
+@use 'base/variables' as v;
+@mixin telefono {
+    @media (max-width: 992px) {
+        @content;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/css/app.css">
+
+</head>
+<body>
+  </header>
+  <header class="contenedor">
+    <nav class="navbar">
+      <div class="contenedor__navbar">
+        <div class="izquierda">
+          <div class="cg">
+            <img id="menu" src="images/icon-menu.svg" alt="menu" class="menu">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="logo" class="logo">
+            </a>
+          </div>
+            <div class="overlay" id="overlay">
+              <ul class="nav__enlaces">
+                <img id="cerrar" src="images/icon-close.svg" alt="boton cerrar" class="cerrar">
+                <li><a class="nav__enlace" href="#">Collections</a></li>
+                <li><a class="nav__enlace" href="#">Men</a></li>
+                <li><a class="nav__enlace" href="#">Women</a></li>
+                <li><a class="nav__enlace" href="#">About</a></li>
+                <li><a class="nav__enlace" href="#">Contact</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="derecha">
+          <div class="carrito__contentedor">
+            <div class="carrito__wrapper">
+              <button class="carrito__btn">
+                <span class="indicador"></span>
+                <img class="carrito" src="images/icon-cart.svg" alt="imagen carrito">
+              </button>
+              <div class="carrito__evo carrito__switch invisible">
+                <p class="carrito__texto">Cart</p>
+                <div class="division"></div>
+                <div class="carrito__contenido vacio">
+                  <p>Your cart is empty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img class="avatar" src="images/image-avatar.png" alt="avatar profile">
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section id="carruselGrande" class="carrusel__grandes">
+      <div class="deslizar">
+        <div class="imagenes__carrusel"> 
+          <figure class="item">
+            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-1.jpg" alt="product">
+          </figure>
+          <figure class="item">
+            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-2.jpg" alt="product">
+          </figure>
+          <figure class="item">
+            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-3.jpg" alt="product">
+          </figure>
+          <figure class="item">
+            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-4.jpg" alt="product">
+          </figure>
+        </div>
+        <div class="carrusel__nav">
+          <img id="previo" class="deslizar__cambio previo" src="images/icon-previous.svg" alt="previo">
+          <img id="siguiente" class="deslizar__cambio siguiente" src="images/icon-next.svg" alt="siguiente">
+        </div>
+      </div>
+
+      <div class="imagenes__small">
+        <img class="thumb" loading="lazy" src="images/image-product-1-thumbnail.jpg" alt="product small">
+        <img class="thumb" loading="lazy" src="images/image-product-2-thumbnail.jpg" alt="product small">
+        <img class="thumb" loading="lazy" src="images/image-product-3-thumbnail.jpg" alt="product small">
+        <img class="thumb" loading="lazy" src="images/image-product-4-thumbnail.jpg" alt="product small">
+      </div>
+    </section>
+
+    <section class="informacion contenedor">
+      <p class="informacion__company">Sneaker Company</p>
+      <h1 class="informacion__titulo">Fall Limited Edition Sneakers</h1>
+      <p class="informacion__descripcion">  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="informacion__precio">
+          <div class="informacion__precio__nuevo">
+            <p class="hoy">$125.00</p>
+            <span class="descuento">50%</span>
+          </div>
+          <p class="informacion__precio__viejo">$250.00</p>
+        </div>
+        <div class="boton">
+          <div class="boton__cuenta">
+            <button id="menos">
+              <img src="images/icon-minus.svg" alt="icono menos">
+            </button>
+            <p class="cuenta">0</p>
+            <button id="sumar">
+              <img src="images/icon-plus.svg" alt="icono sumar">
+            </button>
+          </div> 
+            <button id="agregar__carrito" class="boton__agregar">
+              <img src="images/icon-cart.svg" alt="icono carrito">
+              Add to cart
+            </button>
+        </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

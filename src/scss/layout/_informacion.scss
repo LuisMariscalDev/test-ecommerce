@@ -1,0 +1,186 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.main {
+    margin-top: 1rem;
+    display: flex;
+    max-width: 110rem;
+    margin: auto;
+    gap: 5rem;
+    border: none;
+    margin-top: 2rem;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$negro, 0.5)
+}
+.carrusel__img__grandes{
+    cursor: pointer;
+}
+.imagenes__small {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 6rem;
+    cursor: pointer;
+    height: 9.5rem;
+    margin-left: 9%;
+}
+.deslizar__cambio {
+    display: none;
+}
+.informacion{
+    border: none;
+}
+.informacion__titulo {
+    font-size: 4rem;
+    margin-left: 0;
+}
+.informacion__company{
+    color: v.$naranja;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.informacion__descripcion {
+    color: v.$azul_gris;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.informacion__precio {
+    justify-content: space-between;
+    align-items: center;
+}
+.informacion__precio__nuevo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.hoy {
+    font-size: 3rem;
+}
+.cuenta {
+    font-weight: 700;
+}
+.descuento {
+    margin-left: 3rem;
+    font-size: 1.8rem;
+    background-color: v.$naranja_claro;
+    padding: 1rem;
+    color: v.$naranja;
+    border-radius: 1rem;
+}
+.informacion__precio__viejo {
+    color: v.$azul_gris;
+    text-decoration: line-through;
+}
+.boton {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    margin: 0;
+    padding: 1rem;
+
+}
+.boton__cuenta {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 6rem;
+    margin-top: 2rem;
+    background-color: v.$azul_gris_claro;
+    border-radius: 8px;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+.boton__agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-weight: 700;
+    height: 6rem;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: v.$naranja;
+    color: v.$blanco;
+    cursor: pointer;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 8px;
+
+    img {
+        filter: brightness(5);
+    }
+}
+.hover:hover {
+    color: v.$negro;
+}
+.cart__title {
+    border-bottom: 1px solid v.$azul_gris;
+}
+@include m.telefono {
+    .main {
+    display: block;
+    margin: 0;
+    }
+    .imagenes__carrusel {
+        display: none;
+      }
+
+    .informacion__precio {
+        display: flex;
+    }
+    .boton {
+        display: block;
+    }
+    img {
+        border-radius: 0;
+    }
+    .imagenes__small {
+        display: none;
+    }
+    
+    .deslizar {
+        display: block;
+        overflow: hidden;
+      }
+    .imagenes__carrusel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+    }
+    .item {
+        min-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+      .deslizar__cambio {
+        display: block;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        background-color: v.$azul_gris_claro;
+        border-radius: 50%;
+      }
+      .carrusel__nav {
+        margin: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -250px;
+     }
+
+}
