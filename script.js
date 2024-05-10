@@ -36,8 +36,6 @@ btnMenos.addEventListener('click', () => {
     }
 })
 
-
-
 function cerrarModal(){
   const modal = document.querySelector('.modal')
   const imgCarrusel = document.querySelector('#carruselGrande')
@@ -52,6 +50,4 @@ function carrito() {
     console.log('Clickando el carrito')
   }
 }
-carrusel()
 carrito()
-mostrarImagen()

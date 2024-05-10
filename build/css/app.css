@@ -596,18 +596,22 @@ swiper-slide img {
   object-fit: cover;
 }
 
+.swiper-button-next {
+  display: none;
+}
+
 .main {
   margin-top: 1rem;
   display: flex;
   max-width: 110rem;
   margin: auto;
-  gap: 5rem;
+  gap: 10rem;
   border: none;
   margin-top: 2rem;
 }
 
 .mySwiper {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -619,6 +623,8 @@ swiper-slide img {
   display: flex;
   flex-direction: column;
   width: 40%;
+  margin-top: -5rem;
+  gap: 2rem;
 }
 
 .informacion {
@@ -673,6 +679,7 @@ swiper-slide img {
 .informacion__precio__viejo {
   color: hsl(220, 14%, 75%);
   text-decoration: line-through;
+  margin: 0;
 }
 
 .boton {
@@ -742,6 +749,7 @@ swiper-slide img {
   }
   .swipers {
     width: 100%;
+    margin: 0;
   }
   .imagenes__carrusel {
     display: none;
