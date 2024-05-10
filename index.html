@@ -59,35 +59,39 @@
   </header>
   
   <main class="main">
-    <section id="carruselGrande" class="carrusel__grandes">
-      <div class="deslizar">
-        <div class="imagenes__carrusel"> 
-          <figure class="item">
-            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-1.jpg" alt="product">
-          </figure>
-          <figure class="item">
-            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-2.jpg" alt="product">
-          </figure>
-          <figure class="item">
-            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-3.jpg" alt="product">
-          </figure>
-          <figure class="item">
-            <img class="carrusel__img__grandes" loading="lazy" src="images/image-product-4.jpg" alt="product">
-          </figure>
-        </div>
-        <div class="carrusel__nav">
-          <img id="previo" class="deslizar__cambio previo" src="images/icon-previous.svg" alt="previo">
-          <img id="siguiente" class="deslizar__cambio siguiente" src="images/icon-next.svg" alt="siguiente">
-        </div>
-      </div>
-
-      <div class="imagenes__small">
-        <img class="thumb" loading="lazy" src="images/image-product-1-thumbnail.jpg" alt="product small">
-        <img class="thumb" loading="lazy" src="images/image-product-2-thumbnail.jpg" alt="product small">
-        <img class="thumb" loading="lazy" src="images/image-product-3-thumbnail.jpg" alt="product small">
-        <img class="thumb" loading="lazy" src="images/image-product-4-thumbnail.jpg" alt="product small">
-      </div>
-    </section>
+    <div class="swipers">
+      <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+        thumbs-swiper=".mySwiper2" space-between="4" navigation="true">
+        <swiper-slide>
+          <img src="images/image-product-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    
+      <swiper-container class="mySwiper2" space-between="4" slides-per-view="4" free-mode="true"
+      watch-slides-progress="true">
+        <swiper-slide>
+          <img src="images/image-product-1-thumbnail.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-2-thumbnail.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-3-thumbnail.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-4-thumbnail.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
 
     <section class="informacion contenedor">
       <p class="informacion__company">Sneaker Company</p>
@@ -117,8 +121,12 @@
             </button>
         </div>
     </section>
+    <style>
+    </style>
+
   </main>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>

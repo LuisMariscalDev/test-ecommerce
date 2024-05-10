@@ -11,24 +11,17 @@
     border: none;
     margin-top: 2rem;
 }
-.modal {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(v.$negro, 0.5)
+.mySwiper {
+    height: 100%;
+    width: 100%;
 }
-.carrusel__img__grandes{
+.mySwiper2 {
     cursor: pointer;
 }
-.imagenes__small {
+.swipers {
     display: flex;
-    gap: 2rem;
-    margin: 2rem 0 6rem;
-    cursor: pointer;
-    height: 9.5rem;
-    margin-left: 9%;
-}
-.deslizar__cambio {
-    display: none;
+    flex-direction: column;
+    width: 40%;
 }
 .informacion{
     border: none;
@@ -132,6 +125,16 @@
     display: block;
     margin: 0;
     }
+    .mySwiper2{
+        display: none;
+    }
+    .mySwiper {
+        height: 80%;
+        width: 100%;
+    }
+    .swipers {
+        width: 100%;
+    }
     .imagenes__carrusel {
         display: none;
       }
@@ -158,12 +161,12 @@
         transition: transform 0.5s ease-in-out;
         
         img {
-            width: 100%;
-            display: block;
+            // width: 100%;
+            display: flex;
         }
         
     }
-    .item {
+    .item, .foto {
         min-width: 100%;
         box-sizing: border-box;
         margin: 0;
